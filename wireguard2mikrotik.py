@@ -108,7 +108,7 @@ def remove_deleted():
             response = requests.delete(apiURL+'/interface/wireguard/peers/'+id, auth=HTTPBasicAuth(apiUsername, apiPassword), verify=False)
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Applying wireguard-ui configuration on RouterOS.")
+    parser = argparse.ArgumentParser(description="Applying wireguard-ui configuration on RouterOS.Before first use, configure the variables.")
     parser.add_argument("-d", "--debug", action="store_true", help="Enable debug mode.")
     args = parser.parse_args()
     get_router_peers()
